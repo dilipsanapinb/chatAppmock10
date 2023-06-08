@@ -38,7 +38,7 @@ userRoute.post("/api/register", async (req, res) => {
             isVerified: false,
           });
           await newUser.save();
-          const verficationLink = `http://localhost:8000/user/api/verify/${verifivationToken}`;
+          const verficationLink = `https://mockchatapp.onrender.com/user/api/verify/${verifivationToken}`;
           const mailOptions = {
             from: process.env.EMAIL_SENDER,
             to: email,
