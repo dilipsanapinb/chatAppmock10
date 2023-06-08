@@ -93,7 +93,9 @@ userRoute.get("/api/verify/:token", async (req, res) => {
     }
     user.isVerified = true;
     await user.save();
-    res.redirect("https://mockchatapp.onrender.com/Frontend/login.html");
+    res.redirect(
+      "https://648195b6d095bf00a512a75c--lively-dasik-030f7d.netlify.app/login.html"
+    );
   } catch (error) {
     console.log({ Error: "error at verify the user", Error: error });
     res.status(500).send({ Message: error.message });
