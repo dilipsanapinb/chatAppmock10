@@ -29,7 +29,11 @@ app.listen(process.env.port, async () => {
   console.log(`Server is running on port ${process.env.port}`);
 });
 
-app.use(express.static(path.join(__dirname, "../Frontend")));
+app.use(
+  express.static(
+    path.join(__dirname, "https://mockchatapp.onrender.com/Frontend")
+  )
+);
 
 const io = new Server(server);
 
