@@ -93,7 +93,7 @@ userRoute.get("/api/verify/:token", async (req, res) => {
     }
     user.isVerified = true;
     await user.save();
-    res.redirect("../Frontend/login.html");
+    res.redirect("https://mockchatapp.onrender.com/Frontend/login.html");
   } catch (error) {
     console.log({ Error: "error at verify the user", Error: error });
     res.status(500).send({ Message: error.message });
