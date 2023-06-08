@@ -17,6 +17,7 @@ app.use(cors());
 
 app.use(express.json());
 
+// basci route
 app.get('/', (req, res) => {
   res.send("Welcome to Chat App")
 })
@@ -33,11 +34,7 @@ app.listen(process.env.port, async () => {
   console.log(`Server is running on port ${process.env.port}`);
 });
 
-// app.use(
-//   express.static(
-//     path.join(__dirname, "https://mockchatapp.onrender.com/Frontend")
-//   )
-// );
+
 
 const io = new Server(server);
 
